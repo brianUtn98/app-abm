@@ -11,6 +11,7 @@
         <h1 class="display-20">
             <div align="center" style="color:#626D80">Ingrese un alumno</div>
         </h1>
+        <hr>
         <div class="border">
         <p>
             <form action="../bd/ingresoAlumnos.php" method="post" name="formalumno">

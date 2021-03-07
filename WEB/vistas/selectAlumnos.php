@@ -24,6 +24,7 @@ if(!$respuesta=$con->query($SQL)){
     echo '<h1 class="display-20">';
     echo '<div align="center" style="color:#626D80">Alumnos</div>';
     echo '</h1>';
+    echo '<hr>';
     echo '<div class="border">';
     echo '<table class="table">
     <thead>

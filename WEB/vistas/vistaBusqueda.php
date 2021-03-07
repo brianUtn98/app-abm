@@ -2,24 +2,24 @@
     <head>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         <link href="../css/estilos.css" rel="stylesheet">
-        <title>
-            Alumnos
-        </title>
     </head>
-<body>
-
-<?php
+    <body>
+    <?php
 include '../bd/conect.php';
+        $criterio = $_REQUEST["criterio"];
+        $valor = $_REQUEST["inputCriterio"];
 
-$SQL = "SELECT * FROM alumnos WHERE materias >=10";
-$CONT=0;
+        if($valor){
+            $SQL = "SELECT * FROM alumnos WHERE $criterio='$valor'";
+        } else
+        {
+            $SQL = "SELECT * FROM alumnos";
+        }
+
+        $CONT=0;
 if(!$respuesta=$con->query($SQL)){
     echo $con->error;
 }
-    echo '<h1 class="display-20">';
-    echo '<div align="center" style="color:#626D80">Alumnos regulares</div>';
-    echo '</h1>';
-    echo '<hr>';
     echo '<div class="border">';
     echo '<table class="table">
     <thead>
@@ -28,11 +28,12 @@ if(!$respuesta=$con->query($SQL)){
         <th scope="col">Nombre</th>
         <th scope="col">Apellido</th>
         <th scope="col">Legajo</th>
-        <th scope="col">Calle</td>
-        <th scope="col">Numero</td>
-        <th scope="col">Telefono</td>
-        <th scope="col">Mail</td>
-        <th scope="col">Materias</td>
+        <th scope="col">Calle</th>
+        <th scope="col">Numero</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Mail</th>
+        <th scope="col">Materias</th>
+        <th scope="col"></th>
       </tr>
     </thead>';
         echo '<tbody>';
@@ -48,15 +49,19 @@ if(!$respuesta=$con->query($SQL)){
         echo '<td>'.$fila['telefono'].'</td>';
         echo '<td>'.$fila['mail'].'</td>';
         echo '<td>'.$fila['materias'].'</td>';
+        echo '<td> <button type="button" class="btn btn-light" onClick=detalleAlumno('.$fila['id_alumno'].')>Ver detalle</button> </td>';
         echo '</tr>'; 
     }
         echo '</tbody>';
     echo '</table>';
-    echo '<h6 class="display-20"> Registros leídos: '.$CONT;
+    if($CONT>0){
+        echo '<h6 class="display-20"> Registros leídos: '.$CONT;
+    } else
+    {
+        echo '<h6 class="display-20"> No hay resultados disponibles';
+    }
     echo '</div>';
-      
-?>
-    
-</body>
+ ?>
 
+    </body>
 </html>

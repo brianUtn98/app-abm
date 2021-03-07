@@ -13,10 +13,9 @@
         if(!$respuesta=$con->query($SQL)){
             echo $con->error;
         }
-        echo '<h1 class="display-20">';
-        echo '<div align="center" style="color:#626D80">Alumnos</div>';
-        echo '</h1>';
         echo '<div class="border">';
+        echo '<div align="center"> <img src="recursos/usuario.png" widht=100 height=100> </div>';
+        echo '<hr>';
         echo '<table class="table">
         <thead>         
         <tr>
