@@ -6,7 +6,7 @@
             Alumnos
         </title>
     </head>
-<body>
+<body class="fondo">
 
 <script>
     function detalleAlumno(id){

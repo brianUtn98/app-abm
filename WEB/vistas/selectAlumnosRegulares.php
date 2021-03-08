@@ -6,7 +6,7 @@
             Alumnos
         </title>
     </head>
-<body>
+<body class="fondo">
 
 <?php
 include '../bd/conect.php';

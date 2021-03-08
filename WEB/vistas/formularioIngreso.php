@@ -8,7 +8,7 @@
         </title>
     </head>
 
-    <body>
+    <body class="fondo">
         <h1 class="display-20">
             <div align="center" style="color:#626D80">Ingrese un alumno</div>
         </h1>
