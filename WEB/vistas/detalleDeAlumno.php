@@ -4,6 +4,7 @@
     <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link href="../css/estilos.css" rel="stylesheet">
+    <script language="JavaScript" src="js/script.js"> </script>
     </head>
         <?php
         include '../bd/conect.php';
@@ -45,6 +46,11 @@
         echo '<td>'.$fila['mail'].'</td>';
         echo '<td>'.$fila['materias'].'</td>';
         echo '</tr>'; 
+        echo '</table>';
+        echo '<button type="button" class="btn btn-light" onClick=modificarAlumno('.$fila['id_alumno'].')>Modificar</button>';
+        echo '   ';
+        echo '<button type="button" class="btn btn-light" onClick=eliminarAlumno('.$fila['id_alumno'].')>Eliminar</button>';
+        echo '</div>';
         ?>
     </body>
 </html>

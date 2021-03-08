@@ -7,7 +7,7 @@
         </title>
     </head>
 
-    <body>
+    <body class="menu">
         <div style="margin:20px;">
         <form action="vistaBusqueda.php" method="post" name="navBusquedaForm" target="busquedaFiltrada">
           <div class="row">
