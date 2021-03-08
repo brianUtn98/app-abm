@@ -2,6 +2,7 @@
     <head>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
         <link href="../css/estilos.css" rel="stylesheet">
+        <script language="JavaScript" src="js/validarFormulario.js"> </script>
         <title>
             Formulario de ingreso - Alumnos
         </title>
@@ -68,7 +69,7 @@
                 <div class="col"></div>
                 <div class="col"></div>
                 <div class="col">
-                    <button type="submit" class="btn btn-primary">Ingresar</button>
+                     <input class="btn btn-primary" type="button" value="Cargar" onclick="validarFormulario();">
                 </div>
                  
               </form>

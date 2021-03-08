@@ -31,6 +31,6 @@ if(!$a=$con->query($SQL))
 	}
 else
 	{
-		header('Location: ../formularioIngreso.php');
+		header('Location: ../vistas/formularioIngreso.php');
 	} 
 ?>
