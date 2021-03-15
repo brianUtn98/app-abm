@@ -1,4 +1,4 @@
-function validarFormulario(){
+function validarFormulario() {
     let nombre = document.getElementById("nombre").value;
     let apellido = document.getElementById("apellido").value;
     let legajo = document.getElementById("legajo").value;
@@ -7,49 +7,48 @@ function validarFormulario(){
     let telefono = document.getElementById("telefono").value;
     let email = document.getElementById("email").value;
     let mensajeError = new String("");
-   
-    if(nombre == ""){
-      //  alert("Nombre vacio");
-      mensajeError=String(mensajeError.concat("Nombre, "));
-    }
-    
-    if(apellido == ""){
-       // alert("Apellido vacio");
-       mensajeError=String(mensajeError.concat("Apellido, "));
+
+    if (nombre == "") {
+        //  alert("Nombre vacio");
+        mensajeError = String(mensajeError.concat("Nombre, "));
     }
 
-    if(legajo == ""){
-       // alert("Legajo vacio");
-       mensajeError=String(mensajeError.concat("Legajo, "));
+    if (apellido == "") {
+        // alert("Apellido vacio");
+        mensajeError = String(mensajeError.concat("Apellido, "));
     }
 
-    if(calle == ""){
+    if (legajo == "") {
+        // alert("Legajo vacio");
+        mensajeError = String(mensajeError.concat("Legajo, "));
+    }
+
+    if (calle == "") {
         //alert("Calle vacia");
-        mensajeError=String(mensajeError.concat("Calle, "));
+        mensajeError = String(mensajeError.concat("Calle, "));
     }
 
-    if(numeroCalle == ""){
-       // alert("Numero vacio");
-       mensajeError=String(mensajeError.concat("Numero, "));
+    if (numeroCalle == "") {
+        // alert("Numero vacio");
+        mensajeError = String(mensajeError.concat("Numero, "));
     }
 
-    if(telefono == ""){
+    if (telefono == "") {
         //alert("Telefono vacio");
-        mensajeError=String(mensajeError.concat("Telefono, "));
+        mensajeError = String(mensajeError.concat("Telefono, "));
     }
 
-    if(email == ""){
-      //  alert("Email vacio");
-      mensajeError=String(mensajeError.concat("Mail, "));
+    if (email == "") {
+        //  alert("Email vacio");
+        mensajeError = String(mensajeError.concat("Mail, "));
     }
 
-    if(mensajeError.length!=0){
-        mensajeError=String(mensajeError.trimEnd());
-        mensajeError=String(mensajeError.slice(0,-1));
-        mensajeError=String(mensajeError.concat("."));
-        alert(`Campos vacíos: ${mensajeError}`)
+    if (mensajeError.length != 0) {
+        mensajeError = String(mensajeError.trimEnd());
+        mensajeError = String(mensajeError.slice(0, -1));
+        mensajeError = String(mensajeError.concat("."));
+        alert(`Campos vacíos: ${mensajeError}`);
     } else {
         document.formalumno.submit();
     }
-
 }

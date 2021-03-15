@@ -1,22 +1,23 @@
   .border {
-   margin:20;
-   padding:10;
+      margin: 20;
+      padding: 10;
   }
-
-  body{
-    background-color:#FFFFFF;
+  
+  body {
+      background-color: #FFFFFF;
   }
-
-  .fondo{
-    background-color:#DBD8D6;
+  
+  .fondo {
+      background-color: #DBD8D6;
   }
-
-  .menu{
-    background-color:#8F8B88;
+  
+  .menu {
+      background-color: #8F8B88;
   }
+  
   hr {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    border: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      border: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
   }
